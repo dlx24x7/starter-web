@@ -1,0 +1,356 @@
+  /* Conrad Unciano lesson on Git */
+  /* Date: 2/14/18
+  /* Jason Taylor's udemy Git Complete
+  /* Lesson - Setting up git */
+  mkdir projects
+  cd projects
+  /* determining the version */ 
+  git version
+  /* configuring user and email into the Github */ 
+  git config --global user.name "dlx24x7"
+  git config --global user.email "dlx24x7@gmail.com" 
+  /* cloning a repository */ 
+  git clone https://github.com/dlx24x7/GitHub-demo.git
+  cd GitHub-demo/
+  ls -lart
+  git status
+  echo "Test Git Quick Start demo" >> start.txt
+  ls 
+  cat start.txt
+  git status
+  git add start.txt
+  git status
+  git commit -m "Adding start text file" 
+  git status
+  git push origin master
+  
+  /* configuring textmate for your mac */ 
+  mate
+  /* configuring mate as the default editor */ 
+  git config --global core.editor "mate -w" 
+  git config --global -e
+  cd
+  
+  /* setting up mate font and configuration */ 
+  mate .tm_properties
+  
+  /* Verifying that your configuration files are set up correctly */ 
+  git config --global --list
+  
+  
+  /* Chapter A Starting a fresh project */
+  pwd
+  cd projects
+  ls -lart
+  /* initialing an existing project */ 
+  git init fresh-project
+  ls
+  pwd
+  cd fresh-project/
+  ls
+  /* notice that git creates a .git directory which is the local repository */ 
+  ls -la
+  cd .git
+  ls 
+  cd ..
+  cd ..
+  git status
+  cd ..
+  git status
+  pwd
+  cd projects
+  git status
+  pwd
+  cd fresh-project/
+  git status
+  pwd
+  /* create your first initial file */ 
+  mate hipster.txt
+  /* notice that git status sees an untracked file */ 
+  git status
+  
+  /* Add the file to the branch */ 
+  git add hipster.txt
+  git status
+  
+  /* Get commit to commit a file to the branch */ 
+  git commit
+  git status
+  cd ..
+  pwd
+  pwd
+  ls -lart
+  
+  /* Starting a project with existing code locally */ 
+  cp -r /Users/brandonmichaelunciano/Downloads/initializr ./initializr 
+  ls -lart
+  cd initializr
+  ls -lart
+  cd ..
+  ls -lart
+  /* rename the fold to a good name */ 
+  mv initializr web-project
+  cd web-project
+  pwd
+  ls 
+  /* git init to initialize a new folder */ 
+  git init
+  ls -lart
+  git status
+  
+  /* to recursively add files */ 
+  git add . 
+  git status
+  git commit -m "My first commit, inline" 
+  git status
+  cd ..
+  ls -lart
+  
+  /* Cloning an existing project into your area */ 
+  git clone https://github.com/dlx24x7/starter-web.git
+  ls
+  cd start-web
+  cd starter-web/
+  ls -lart
+  git status
+  pwd
+  cd ..
+  ls -lart
+  cd starter-web/
+  clear
+  ls
+  git status
+  / * Create your first file for ingesting into git */
+  mate hipster.txt
+  ls
+  /* git status notices the file is not tracked */ 
+  git status
+  /* git add hipster adds the file to the git staging area */ 
+  git add hipster.txt
+  git status
+  /* commit the changes to the master branch */
+  git commit
+  git status
+  /* pull down the latest changes from the github central repo */
+  git pull origin master
+  /* This pushes command to the github central repo */ 
+  git push origin master
+  pwd
+  ls -lart
+  git status
+  mate hipster.txt
+  git status
+  
+  /* This command does an add and a commit at the same time */  
+  git commit -am "Adding more ipsum text" 
+  git ls-files
+  mate newfile.txt
+  ls
+  git status
+  
+  /* To get a listing of tracked files */ 
+  git ls-files
+  /* to add a new file */ 
+  git add newfile.txt
+  git status
+  /* verify the file has been added */ 
+  git ls-files
+  
+  /* Editing existing new files */ 
+  mate hipster.txt
+  git status
+  git commit -m "Adding new file" 
+  git status
+  /* adding new changes to the file */ 
+  git add hipster.txt
+  git status
+  /* adding more changes to the file */ 
+  mate hipster.txt
+  git status
+  git add hipster.txt
+  git status
+  git commit -m "More ipsum hipsters"
+  git status
+  
+  /* How to recursively add multiple directories */ 
+  mkdir -p level1/level2/level3/level5
+  ls
+  cd level1
+  pwd
+  /* create a level 1 file */ 
+  mate level1.txt
+  ls
+  cd level2
+  /* create a level 2 file */ 
+  mate level2.txt
+  ls
+  cat level2.txt
+  ls -lart
+  cd level3
+  ls -lart
+  /* create a level 3 file */ 
+  mate level3.txt
+  ls -lart
+  /* remove the last file */
+  rm -rf level5
+  cd ../../..
+  ls
+  git status
+  /* This file adds everything recursively */ 
+  git add . 
+  
+  /* Backing out changes */ 
+  git status
+  git commit 
+  git status
+  cd level1
+  ls 
+  mate level1.txt
+  git status
+  git add level1.txt
+  git status
+  mate level1.txt
+  /* To back out the changes you have created */  
+  git reset HEAD level1.txt
+  git status
+  mate level1.txt
+  clear
+  git status
+  /* To discard the changes in the working directory */ 
+  git checkout -- level1.txt
+  
+  /* Renaming files */ 
+  git status
+  mate level1.txt
+  ls -lart
+  cd level2
+  cd level3
+  pwd
+  ls
+  git status
+  ls 
+  /* to rename the file via git */ 
+  git mv level3.txt level3-file.txt
+  ls
+  git status
+  git commit -m "renaming level 3 file" 
+  cd ..
+  ls -lart
+  /* to rename the file without using git */ 
+  mv level2.txt level2-file.txt
+  ls
+  git status
+  /* to recursively add files that have been moved or renamed run the following command */ 
+  git add -A
+  git status
+  git commit 
+  ls -lart
+  /* rename the file */ 
+  git mv level2-file.txt 2.txt
+  ls
+  git status
+  /* rename it back */ 
+  git mv 2.txt level2-file.txt
+  ls
+  git status
+  pwd
+  ls 
+  /* move the file to a sub directory */
+  git mv level2-file.txt level3
+  ls -lart
+  cd level3
+  ls -lart
+  git status
+  cd ..
+  git status
+  git commit
+  ls
+  cd level3
+  ls
+  /* Next move the file back to the level2 dir */ 
+  mv level2-file.txt ..
+  ls
+  cd ..
+  pwd
+  ls
+  git status
+  /* to recursively add files that have been moved or renamed run the following command */
+  git add -A
+  git status
+  git commit
+  cd ..
+  pwd
+  ls -lart
+  cd ..
+  ls -lart
+  pwd
+  git status
+  
+  /* Deleting files */ 
+  mate doomed.txt
+  ls
+  git status
+  /* example 1 deleting an untracked file*/ 
+  git rm doomed.txt 
+  /*git rm won't return anything, just rm the file */ 
+  rm doomed.txt
+  ls
+  /* example 2 deleting a tracked file */ 
+  git ls-files
+  git rm newfile.txt
+  git status
+  /* commit the deletion */ 
+  git commit -m "Deleting new file" 
+  git status
+  git ls-files
+  git rm hipster.txt
+  git status
+  ls -la
+  git status
+  /* to reverse the deletion */ 
+  git reset HEAD hipster.txt
+  git status
+  /* file won't reappear until you discard the changes */ 
+  git checkout -- hipster.txt
+  ls
+  git status
+  /* next delete the file outside of git */ 
+  rm hipster.txt
+  git status
+  /* to stage the delete */ 
+  git add -A
+  git status
+  /* to complete the deletion*/ 
+  git commit
+  ls -lart
+  ls
+  /* recursively deleting directories */ 
+  rm -rf level1
+  git status
+  git add -A
+  git status
+  git commit -m "deleting level1 and all children" 
+  git status
+  pwd
+  git status
+  
+  /* Getting git history */ 
+  git log
+  git help log
+  /* adding a one line graph with beauty */ 
+  git log --oneline --graph --decorate
+  ls 
+  git status
+  git log -- humans.txt
+  ls -lart
+  git status
+  
+  /* Creating an alias with git */ 
+  git log --all --graph --decorate --oneline
+  /* create an alias */ 
+  git config --global alias.hist "log --all --graph --decorate --oneline" 
+  /* verify the history */ 
+  git hist
+  mate ~/.gitconfig
+  
+  
