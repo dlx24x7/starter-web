@@ -9,7 +9,10 @@ This is an exaple to show different parts of the Git repository and various comm
 ## Purpose
 
 Sample website with plenty of files for demos
+more updates
 
 ## Deployment
+
+Add deployment stuff
 
 ## How to Contribute
