@@ -1,0 +1,224 @@
+  /* Sample commands to connect to an instance */
+  ssh ec2-user@18.218.38.135 -i cv-test-pem.pem 
+  ssh ec2-user@18.221.160.101 -i cv-test-pem.pem 
+  
+  /* Sample command to test out an IAM role by seeing if you can list the buckets */
+  aws s3 ls
+  
+  /* Starting an instance by hand */  
+  aws ec2 run-instances --image-id ami-f63b1193 --count 1 --instance-type t2.micro --key-name cv-test-pem --security-group-ids sg-a38c7dc8 --subnet-id subnet-8613cd33
+
+  /* Getting help on ec2 */ 
+  aws help ec2 run-instances
+  aws help ec2
+  aws ec2 run-instances help
+  
+  /* running instances */ 
+  aws ec2 run-instances --image-id ami-f63b1193 --count 1 --instance-type t2.micro --key-name cv-test-pem --security-group-ids sg-a38c7dc8 --subnet-id subnet-8613cd33
+  aws ec2 run-instances --image-id ami-f63b1193 --count 1 --instance-type t2.micro --key-name cv-test-pem --security-group-ids sg-a38c7dc8 --subnet-id subnet-8613cdee
+  
+  /* Connect to instances */ 
+  ssh ec2-user@18.219.7.29 -i cv-test-pem.pem 
+  ssh ec2-user@18.219.7.29 -i cv-test-pem.pem 
+  
+  
+  
+  /* Cloning the A-cloud Guru software */  
+  git clone https://github.com/acantril/aCloudGuru-AdvancedCloudFormation.git
+  git clone https://github.com/acantril/aCloudGuru-AdvancedCloudFormation.git
+  309  cd aCloudGuru-AdvancedCloudFormation/
+  310  ls -art
+  311  cd 101
+  312  cd 101-OURFIRSTTEMPLATE/
+  313  ls -lart
+  314  more wp-infrastructure1.yaml
+  315  vi wp-infrastructure1.yaml
+  316  pip install awscli --upgrade --user
+  317  cd ..
+  318  ls -lart
+  319  cd Downloads
+  320  pwd
+  321  cd ..
+  322  pwd
+  323  cd Downloads
+  324  ls -lart
+  325  more credentials
+  326  more credentials.csv
+  327  aws configure
+  328  pip -install awscli --upgrade --user
+  329  pip install awscli --upgrade --user
+  330  aws s3 ls
+  331  pip --version
+  332  aws --version
+  333  history
+  334  310
+  335  pip install awscli --upgrade --user
+  336  which python
+  337  run ls -al 
+  338  ls -la
+  339  which python
+  340  ls -lart /Library/Frameworks/Python.framework/Versions/2.7/bin/python
+  341  echo $SHELL
+  342  pip install awscli --upgrade --user
+  343  echo $PATH
+  344  curl -O https://bootstrap.pypa.io/get-pip.py
+  345  python3 get-pip.py --user
+  346  pip3 install awscli --upgrade --user
+  347  aws --version
+  348  echo $PATH
+  349  history
+  350  python3 get-pip.py --user
+  351  pip3 install awscli --upgrade --user
+  352  echo $PATH
+  353  cd
+  354  ls -lart ~
+  355  cp .bash_profile .bash_profile.Jan2018
+  356  vi .bash_profile
+  357  source ~/.bash_profile
+  358  aws --version
+  359  echo $PATH
+  360  cd /Users/brandonmichaelunciano/Library/Python/3.6/lib/python/site-packages
+  361  ls -lart
+  362  cd awscli
+  363  ls -alrt
+  364  ls -lart aws*
+  365  cd ..
+  366  ls -lart
+  367  cd
+  368  ls -lart
+  369  vi .bash_profile
+  370  history
+  371  source ~/.bash_profile
+  372  aws --version
+  373  pwd
+  374  cd .local
+  375  ls -alrt
+  376  ls .local
+  377  ls -lart
+  378  cd bin
+  379  cd
+  380  ls -lart
+  381  find aws
+  382  cd Applications
+  383  cd
+  384  cd Applications/
+  385  ls -lart
+  386  cd ..
+  387  ls -lart
+  388  which python
+  389  cd /Library/Frameworks/Python.framework/Versions/2.7/bin/python
+  390  cd /Library/Frameworks/Python.framework/Versions/2.7/bin/
+  391  ls -lart
+  392  ls aws* 
+  393  history
+  394  pip3 install awscli --upgrade --user
+  395  cd ..
+  396  ls -lart
+  397  cd
+  398  cd Library
+  399  ls -lart
+  400  cd Python
+  401  ls -lart
+  402  cd 3.6
+  403  ls -lart
+  404  cd bin
+  405  ls -lart
+  406  ./aws --version
+  407  cd ..
+  408  ls -lart
+  409  cd bin
+  410  ls -lart
+  411  pwd
+  412  cd ..
+  413  ls -lart
+  414  cd
+  415  ls -lart
+  416  vi .bash_profile
+  417  history
+  418  cd
+  419  #352
+  420  source ~/.bash_profile
+  421  aws --version
+  422  aws configure
+  423  aws s3 ls
+  424  aws iam create-user -user-name Alice_test > Alice_test.out
+  425  aws iam help
+  426  aws iam help
+  427  more Alice_test.out
+  428  rm Alice_test.out 
+  429  aws iam create-user --username Alice_test > Alice_test.out
+  430  aws iam create-user help
+  431  more Alice_test.out 
+  432  rm Alice_test.out 
+  433  aws iam create-user --username Alice_test
+  434  aws iam create-user --user-name Alice_test
+  435  aws iam create-user --user-name Bob_test > Bob_test.out
+  436  more Bob_test.out
+  437  aws iam create-user --user-name Charlie_test > Charlie_test.out
+  438  more Charlie_test.out 
+  439  history
+  440  more .bash_profile
+  441  aws --version
+  442  aws configure
+  443  aws s3 ls
+  444  aws ec2 describe-availability-zones
+  445  aws iam create-login-profile --user-name Alice_test --password Fluffy@meowl
+  446  aws iam create-login-profile --user-name Alice_test --password Fluffy@meowl123
+  447  aws iam create-login-profile --user-name Bob_test --password Fluffy@meowl123
+  448  aws iam create-access-key --user-name Alice_test
+  449  aws iam create-access-key --user-name Charlie_test
+  450  aws iam create-group --group-name admin_test
+  451  aws iam add-user-to-group --group-name admin_test Alice_test
+  452  aws iam add-user-to-group --group-name admin_test --user-name Alice_test
+  453  aws iam create-group --group-name monitor_test
+  454  aws iam add-user-to-group --group-name monitor_test Bob_test
+  455  aws iam add-user-to-group --group-name monitor_test --user-name Bob_test
+  456  aws iam create-group --group-name operators_test
+  457  aws iam add-user-to-group --group-name operators_test --user-name Charlie_test
+  458  pwd
+  459  cd Downloads/
+  460  ls -lart
+  461  ls -lart *.pem
+  462  ssh ec2-user@18.220.3.29 -i cv-test-pem.pem 
+  463  ssh ec2-user@18.218.23.64 -i cv-test-pem.pem 
+  464  ssh ec2-user@18.216.167.218 -i cv-test-pem.pem 
+  465  ssh ec2-user@18.216.167.218 -i cv-test-pem.pem 
+  466  ssh ec2-user@18.216.167.218 -i cv-test-pem.pem 
+  467  aws s3 ls
+  468  aws dynamodb help
+  469  aws dynamodb create-table \ --table-name MusicCollection \ --attribute-definitions \ AttributeName = Artist, AttributeType = S AttributeName = Title, AttributeType = S \ --key-schema AttributeName = Artist, KeyType = HASH \ AttributeName = Title, KeyType = RANGE \ --provisioned-throughput ReadCapacityUnits = 1, WriteCapacityUnits = 1
+  470  aws dynamodb create-table \ --table-name MusicCollection \ --attribute-definitions \ AttributeName = Artist, AttributeType = S AttributeName = Title, AttributeType = S \ --key-schema AttributeName = Artist, KeyType = HASH \ AttributeName = Title, KeyType = RANGE \ --provisioned-throughput ReadCapacityUnits = 1, WriteCapacityUnits = 1
+  471  aws dynamodb create-table --table-name MusicCollection --attribute-definitions AttributeName = Artist, AttributeType = S AttributeName = Title, AttributeType = S --key-schema AttributeName = Artist, KeyType = HASH AttributeName = Title, KeyType = RANGE --provisioned-throughput ReadCapacityUnits = 1, WriteCapacityUnits = 1
+  472  aws dynamodb create-table --table-name MusicCollection --attribute-definitions AttributeName = Artist, AttributeType = S AttributeName = Title, AttributeType = S --key-schema AttributeName = Artist, KeyType = HASH AttributeName = Title, KeyType = RANGE --provisioned-throughput ReadCapacityUnits=1, WriteCapacityUnits=1
+  473  aws dynamodb create-table --table-name MusicCollection --attribute-definitions AttributeName = Artist, AttributeType = S AttributeName = Title, AttributeType = S --key-schema AttributeName = Artist, KeyType = HASH AttributeName = Title, KeyType = RANGE --provisioned-throughput ReadCapacityUnits=1, WriteCapacityUnits=1
+  474  aws dynamodb create-table --table-name MusicCollection --attribute-definitions AttributeName = Artist, AttributeType = S AttributeName = Title, AttributeType = S --key-schema AttributeName = Artist, KeyType = HASH AttributeName = Title, KeyType = RANGE --provisioned-throughput ReadCapacityUnits=1,WriteCapacityUnits=1
+  475  aws dynamodb create-table --table-name MusicCollection --attribute-definitions AttributeName=Artist, AttributeType=S AttributeName = Title, AttributeType = S --key-schema AttributeName = Artist, KeyType = HASH AttributeName=Title, KeyType = RANGE --provisioned-throughput ReadCapacityUnits=1, WriteCapacityUnits=1
+  476  aws dynamodb create-table --table-name MusicCollection --attribute-definitions AttributeName=Artist, AttributeType=S AttributeName = Title, AttributeType = S --key-schema AttributeName = Artist, KeyType = HASH AttributeName=Title, KeyType = RANGE --provisioned-throughput ReadCapacityUnits=1,WriteCapacityUnits=1
+  477  vi AWS_cli-input
+  478  vi AWS_cli-input
+  479  aws dynamodb create-table --table-name MusicCollection --attribute-definitions AttributeName=Artist, AttributeType=S AttributeName = Title, AttributeType = S --key-schema AttributeName = Artist, KeyType = HASH AttributeName=Title, KeyType = RANGE --provisioned-throughput ReadCapacityUnits=1,WriteCapacityUnit =1
+  480  aws dynamodb create-table --table-name MusicCollection --attribute-definitions AttributeName=Artist, AttributeType=S AttributeName = Title, AttributeType = S --key-schema AttributeName = Artist, KeyType = HASH AttributeName=Title, KeyType = RANGE --provisioned-throughput ReadCapacityUnits=1,WriteCapacityUnit=1
+  481  vi AWS_cli-input
+  482  vi AWS_cli-input
+  483  aws dynamodb create-table --table-name MusicCollection --attribute-definitions AttributeName=Artist, AttributeType=S, AttributeName = Title, AttributeType = S --key-schema AttributeName = Artist, KeyType = HASH, AttributeName=Title, KeyType = RANGE --provisioned-throughput ReadCapacityUnits=1,WriteCapacityUnit =1
+  484  aws dynamodb create-table --table-name MusicCollection --attribute-definitions AttributeName=Artist, AttributeType=S, AttributeName = Title, AttributeType = S --key-schema AttributeName = Artist, KeyType = HASH, AttributeName=Title, KeyType = RANGE --provisioned-throughput ReadCapacityUnits=1,WriteCapacityUnit=1
+  485  vi AWS_cli-input
+  486  aws dynamodb create-table \ --table-name MusicCollection \ --attribute-definitions \ AttributeName = Artist, AttributeType = S AttributeName = Title, AttributeType = S \ --key-schema AttributeName = Artist, KeyType = HASH \ AttributeName = Title, KeyType = RANGE \ --provisioned-throughput ReadCapacityUnits = 1, WriteCapacityUnits = 1
+  487  aws dynamodb create-table \ 
+  488  --table-name MusicCollection \ 
+  489  --attribute-definitions \ 
+  490  AttributeName = Artist, AttributeType = S AttributeName = Title, AttributeType = S \ 
+  491  --key-schema AttributeName = Artist, KeyType = HASH \ 
+  492  AttributeName = Title, KeyType = RANGE --provisioned-throughput ReadCapacityUnits = 1, WriteCapacityUnits = 1
+  493  aws dynamodb create-table --table-name MusicCollection --attribute-definitions AttributeName = Artist, AttributeType = S AttributeName = Title, AttributeType = S --key-schema AttributeName = Artist, KeyType = HASH AttributeName = Title, KeyType = RANGE --provisioned-throughput ReadCapacityUnits = 1, WriteCapacityUnits = 1
+  494  vi AWS_cli-input
+  495  vi AWS_cli-input
+  496  ssh ec2-user@52.14.243.147 -i cv-test-pem.pem 
+  497  ls -lart *.pem
+  498  chmod 600 devops-pro.pem
+  499  ls -lart
+  500  more devops-pro.pem 
+  501  ssh ec2-user@34.205.134.21 -i devops-pro.pem 
+  502  ssh 34.205.134.21 -i devops-pro.pem 
+  503  ssh linuxacademy@34.205.134.21 -i devops-pro.pem 
+  
